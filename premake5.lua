@@ -28,11 +28,11 @@ project "xxHash"
 
 	filter "system:windows"
 		systemversion "latest"
-		cppdialect "C17"
+		cdialect "C17"
 
 	filter "system:linux"
 		systemversion "latest"
-		cppdialect "gnu17"
+		cdialect "gnu17"
 
 	filter "configurations:Debug"
 		runtime "Debug"
