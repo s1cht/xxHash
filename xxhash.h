@@ -56,7 +56,7 @@
  * The reference system uses an Intel i7-9700K CPU, and runs Ubuntu x64 20.04.
  * The open source benchmark program is compiled with clang v10.0 using -O3 flag.
  *
- * | Hash Name            | ISA ext | Width | Large Data Speed | Small Data Velocity |
+ * | Hash Name            | ISA ext | Width | Large String Speed | Small String Velocity |
  * | -------------------- | ------- | ----: | ---------------: | ------------------: |
  * | XXH3_64bits()        | @b AVX2 |    64 |        59.4 GB/s |               133.1 |
  * | MeowHash             | AES-NI  |   128 |        58.2 GB/s |                52.5 |
