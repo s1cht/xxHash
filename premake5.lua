@@ -1,10 +1,16 @@
+local localBinLocation = "%{wks.location}/bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
+local localBinIntLocation = "%{wks.location}/bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
+
+if (outputBinDirectory ~= nil) localBinLocation = outputBinDirectory .. "/%{prj.name}"
+if (outputInterDirectory ~= nil) localBinIntLocation = outputInterDirectory .. "/%{prj.name}"
+
 project "xxHash"
 	kind "StaticLib"
 	language "C"
     staticruntime "off"
 
-	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
+	targetdir (localBinLocation)
+	objdir    (localBinIntLocation)
 
 	files
 	{
