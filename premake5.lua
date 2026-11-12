@@ -1,8 +1,8 @@
 local localBinLocation = "%{wks.location}/bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
-local localBinIntLocation = "%{wks.location}/bin/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
+local localBinIntLocation = "%{wks.location}/bin-int/%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}/%{prj.name}"
 
-if (outputBinDirectory ~= nil) localBinLocation = outputBinDirectory .. "/%{prj.name}"
-if (outputInterDirectory ~= nil) localBinIntLocation = outputInterDirectory .. "/%{prj.name}"
+if (outputBinDirectory ~= nil) then localBinLocation = outputBinDirectory .. "/%{prj.name}" end
+if (outputInterDirectory ~= nil) then localBinIntLocation = outputInterDirectory .. "/%{prj.name}" end
 
 project "xxHash"
 	kind "StaticLib"
